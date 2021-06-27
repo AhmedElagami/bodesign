@@ -1,6 +1,9 @@
 .header {
 	display: flex;
 	height: 9rem;
+	@include respond(phone) {
+		height: 20vw;
+	}
 	flex-direction: column;
 	justify-content: center;
 	&__container {
