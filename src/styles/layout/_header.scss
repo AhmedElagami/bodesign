@@ -1,0 +1,126 @@
+.header {
+	display: flex;
+	height: 9rem;
+	flex-direction: column;
+	justify-content: center;
+	&__container {
+		padding: 1rem 3rem;
+		height: 100%;
+		display: flex;
+		@include respond(tab-port-small) {
+			display: none;
+		}
+		flex-direction: row;
+		align-items: center;
+		font-family: var(--font-secondary);
+		font-weight: 700;
+		transform-origin: top;
+		transition: all 0.4s ease-in;
+		transform: scale(1);
+		backface-visibility: hidden;
+		&--fixed {
+			height: auto;
+			position: fixed;
+			top: 0;
+			z-index: 999;
+			width: 100%;
+			transform: scaleY(1.4);
+			background-color: rgba(0, 0, 0, 0.79);
+		}
+		&--fixed .header__list {
+			transform: scaleY(0.6) scaleX(0.9);
+		}
+		&--fixed .header__logo {
+			transform: scaleY(0.8) scaleX(1.1);
+		}
+	}
+	&__logo-container {
+		margin-right: auto;
+		height: 5rem;
+		width: 5rem;
+	}
+	&__logo {
+		transition: all 0.4s ease-in;
+		display: block;
+		transform-origin: left;
+	}
+	&__list {
+		transition: all 0.4s ease-in;
+		list-style-type: none;
+		display: grid;
+		grid-template-columns: repeat(6, max-content);
+		column-gap: 2.2rem;
+		transform-origin: right;
+	}
+
+	&__link {
+		text-decoration: none;
+		color: var(--color-white);
+		transition: all 0.4s ease-in-out;
+		&:hover {
+			opacity: 0.7;
+		}
+	}
+
+	&__item {
+		font-size: 1.4rem;
+		letter-spacing: 4px;
+		text-transform: uppercase;
+	}
+}
+
+.header-mobile {
+	display: none;
+	@include respond(tab-port-small) {
+		display: block;
+	}
+	width: 80%;
+	margin: 0 auto;
+	div {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__nav {
+		font-family: var(--font-secondary);
+		font-weight: 700;
+		font-size: 1.6rem;
+		position: absolute;
+		left: 50%;
+		top: 9rem;
+		width: 80%;
+		transform: scaleY(0) translateX(-50%);
+		transform-origin: top;
+
+		z-index: 9999;
+		transition: all 0.5s;
+		border-top: 3px solid #2ea3f2;
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+		background-color: rgba(10, 3, 3, 0.44);
+	}
+	&__nav.shown {
+		transform: scaleY(1) translateX(-50%);
+	}
+	&__list {
+		list-style: none;
+	}
+	&__link {
+		&:link,
+		&:visited {
+			color: white;
+			border-bottom: 1px solid rgba(0, 0, 0, 03);
+			padding: 10px 5%;
+			display: block;
+			font-size: 1.4rem;
+			transition: all 0.2 ease-in-out;
+			text-decoration: none;
+		}
+	}
+	&__btn-toggle {
+		font-size: 32px;
+		position: relative;
+		left: 0;
+		top: 0;
+		cursor: pointer;
+	}
+}

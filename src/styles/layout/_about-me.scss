@@ -1,0 +1,40 @@
+.about-me {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(34rem, 1fr));
+	align-items: start;
+	justify-content: center;
+	justify-items: center;
+	grid-auto-flow: row;
+	grid-gap: 2rem;
+
+	&__heading {
+		grid-row: 1/2;
+		grid-column: 1 / -1;
+	}
+	&__image {
+		grid-row: 2/3;
+		grid-column: 1 / -1;
+		display: block;
+		width: 40%;
+	}
+
+	&__text {
+		font-family: var(--font-secondary);
+		font-size: 1.6rem;
+		font-weight: 700;
+		color: var(--color-black);
+		line-height: 3.2rem;
+		&:nth-child(2n) {
+			text-align: right;
+			@include respond(phone-big) {
+				text-align: left;
+			}
+		}
+	}
+
+	&__name {
+		grid-column: 1 / -1;
+		grid-row: 3/4;
+		transform: translateY(-2rem);
+	}
+}

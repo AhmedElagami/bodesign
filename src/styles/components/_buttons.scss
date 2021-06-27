@@ -1,0 +1,82 @@
+.btn-primary {
+	&,
+	&:link,
+	&:visited {
+		cursor: pointer;
+		border: 2px solid black;
+		background-color: white;
+		border-radius: 4.5rem;
+		font-size: 4.6rem;
+		letter-spacing: 2px;
+		transition: all 300ms ease;
+		color: #001544;
+		padding: 0.63rem 2.1rem 0rem;
+		font-family: var(--font-tertiary-2);
+		text-decoration: none;
+		outline: none;
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+	}
+	&::after {
+		content: "\203A";
+		font-family: var(--font-secondary);
+		transition: all 0.3s ease;
+		margin-left: -1rem;
+		font-size: 6.6rem;
+		line-height: 0;
+		margin-top: -2.5rem;
+		opacity: 0;
+	}
+
+	&:hover::after {
+		margin-left: 1.5rem;
+		opacity: 1;
+	}
+}
+
+.btn-secondary {
+	&,
+	&:link,
+	&:visited {
+		cursor: pointer;
+		border: 2px solid white;
+		display: inline-block;
+		border-radius: 1.9rem;
+		letter-spacing: 6px;
+		font-size: 2.1rem;
+		transition: all 300ms ease;
+		color: white;
+		background-color: transparent;
+		padding: 0.63rem 2.1rem;
+		font-family: var(--font-secondary);
+		font-weight: 700;
+		text-decoration: none;
+		outline: none;
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+	}
+	&::after {
+		content: "\203A";
+		transition: all 0.3s ease;
+		margin-left: -2rem;
+		font-size: 3rem;
+		line-height: 0;
+		margin-top: -0.7rem;
+		opacity: 0;
+	}
+
+	&:hover::after {
+		margin-left: 1rem;
+		opacity: 1;
+		font-size: 3rem;
+		line-height: 0;
+		margin-top: -0.7rem;
+	}
+
+	&:hover {
+		border: 2px solid transparent;
+		background-color: hsla(0, 0%, 100%, 0.2);
+	}
+}

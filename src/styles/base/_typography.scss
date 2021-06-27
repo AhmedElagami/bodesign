@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@font-face {
+	font-family: "Champagne & Limousines";
+	font-style: normal;
+	font-weight: normal;
+	src: local("Champagne & Limousines"), url("/fonts/Champagne & Limousines.woff") format("woff");
+}
+
+@font-face {
+	font-family: "Champagne & Limousines Italic";
+	font-style: normal;
+	font-weight: normal;
+	src: local("Champagne & Limousines Italic"), url("/fonts/Champagne & Limousines Italic.woff") format("woff");
+}
+
+@font-face {
+	font-family: "Champagne & Limousines Bold";
+	font-style: normal;
+	font-weight: normal;
+	src: local("Champagne & Limousines Bold"), url("/fonts/Champagne & Limousines Bold.woff") format("woff");
+}
+
+@font-face {
+	font-family: "Champagne & Limousines Bold Italic";
+	font-style: normal;
+	font-weight: normal;
+	src: local("Champagne & Limousines Bold Italic"),
+		url("/fonts/Champagne & Limousines Bold Italic.woff") format("woff");
+}
+.heading-primary {
+	text-align: center;
+	font-size: 2.4rem;
+	letter-spacing: 6px;
+	font-weight: 700;
+	padding: 0 5rem;
+	@include respond(phone) {
+		font-size: 2em;
+		letter-spacing: 3px;
+		padding: 0 1rem;
+	}
+	text-transform: uppercase;
+	font-family: var(--font-secondary);
+	color: var(--color-black);
+	position: relative;
+	display: inline-block;
+	&::after {
+		content: "";
+		display: block;
+		background-image: url(/assets/black_border.png);
+		background-position: center;
+		height: 2rem;
+		background-repeat: no-repeat;
+		position: absolute;
+		left: 0;
+		top: 80%;
+		width: 100%;
+	}
+}
+
+.heading-secondary {
+	text-align: center;
+	font-size: 1.8rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	font-family: var(--font-secondary);
+	color: var(--color-white);
+	position: relative;
+	padding: 0 5rem;
+	display: inline-block;
+	&::after {
+		content: "";
+		display: block;
+		background-image: url(/assets/white_border.png);
+		background-position: center;
+		height: 2rem;
+		background-repeat: no-repeat;
+		position: absolute;
+		left: 0;
+		top: 80%;
+		width: 100%;
+	}
+}
+.heading--hero {
+	font-size: 3.4rem;
+}
+
+.heading-tertiary {
+	font-size: 1.9rem;
+	font-weight: 700;
+	letter-spacing: 2px;
+	line-height: 3.2rem;
+}
+
+.paragraph-primary {
+	font-family: var(--font-secondary);
+	font-size: 1.7rem;
+	font-weight: 500;
+	line-height: 1.8rem;
+}
+
+.paragraph-secondary {
+	font-family: var(--font-tertiary);
+	font-size: 1.5rem;
+	font-weight: 500;
+}

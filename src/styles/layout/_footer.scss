@@ -1,0 +1,59 @@
+.footer {
+	background-image: url(/assets/hero_background.png);
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+	padding: 7rem 3rem;
+	text-align: center;
+
+	font-size: 1.6rem;
+	font-weight: 700;
+	font-family: var(--font-secondary);
+	color: white;
+	& > * {
+		&:not(:last-child) {
+			margin-bottom: 1.5rem;
+		}
+	}
+	&__logo {
+		width: 6rem;
+		height: 6rem;
+	}
+
+	&__heading {
+	}
+
+	&__text {
+	}
+
+	&__facebook,
+	&__instagram {
+		svg {
+			height: 3.6rem;
+			width: 3.6rem;
+		}
+		&:not(:last-child) {
+			margin-right: 1rem;
+		}
+	}
+	&__facebook {
+		color: #3b5998;
+	}
+
+	&__instagram {
+		color: #ea2c59;
+	}
+
+	&__user-agreement {
+		&,
+		&:link,
+		&:visited {
+			color: #2ea3f2;
+			text-decoration: none;
+		}
+	}
+}

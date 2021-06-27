@@ -1,0 +1,31 @@
+.webshop {
+	background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.28) 0%, rgba(0, 1, 51, 0.4) 100%),
+		url("/assets/webshop_background.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	padding-top: 8vw;
+	position: relative;
+	height: 54.7rem;
+	text-align: center;
+	&__heading {
+		font-size: 1.9rem;
+		font-family: var(--font-secondary);
+		font-weight: 600;
+		letter-spacing: 2px;
+		line-height: 3.2rem;
+		color: var(--color-white);
+		text-align: center;
+		margin-bottom: 2vw;
+	}
+	&__bottom {
+		background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIyNTRweCIgdmlld0JveD0iMCAwIDEyODAgMTQwIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9IiMwMDBkMWUiPjxwYXRoIGQ9Ik02NDAgMTM5TDAgMHYxNDBoMTI4MFYwTDY0MCAxMzl6IiBmaWxsLW9wYWNpdHk9Ii41Ii8+PHBhdGggZD0iTTY0MCAxMzlMMCA0MnY5OGgxMjgwVjQybC02NDAgOTd6Ii8+PC9nPjwvc3ZnPg==);
+		background-size: 100% 25.4rem;
+		height: 25.4rem;
+		z-index: 100;
+		margin-bottom: -1px;
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+	}
+}

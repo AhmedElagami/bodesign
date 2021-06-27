@@ -1,0 +1,112 @@
+.prices {
+	padding-top: 4rem;
+	text-align: center;
+	&__container {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+	}
+	&__paragraph {
+		font-weight: 700;
+		font-family: var(--font-secondary);
+		font-size: 1.6rem;
+		color: black;
+	}
+	&__endShape {
+		background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDBweCIgdmlld0JveD0iMCAwIDEyODAgMTQwIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9IiMwMDAwMDAiPjxwYXRoIGQ9Ik02NDAgMTM5TDAgMHYxNDBoMTI4MFYwTDY0MCAxMzl6Ii8+PC9nPjwvc3ZnPg==);
+		background-size: 100% 10rem;
+		height: 10rem;
+		z-index: 1;
+	}
+}
+.price {
+	display: flex;
+	flex-direction: column;
+	padding: 5rem;
+	margin-bottom: 3rem;
+	&:nth-child(6n-2),
+	&:nth-child(6n-1),
+	&:nth-child(6n) {
+		background-color: #d3d3d3;
+	}
+	&__title {
+		align-self: center;
+	}
+	&__value {
+		font-size: 4.9rem;
+		font-weight: 500;
+		font-family: var(--font-tertiary-2);
+		letter-spacing: 1px;
+		margin: 2.5rem 0;
+		span {
+			font-size: 18px;
+		}
+	}
+
+	&__button {
+		width: 100%;
+		font-family: var(--font-secondary);
+		font-size: 1.6rem;
+		font-weight: 700;
+		padding: 2rem;
+		cursor: pointer;
+		word-wrap: break-word;
+		color: black;
+		position: relative;
+
+		display: flex;
+		align-items: center;
+
+		outline: none;
+		border: none;
+		background-color: transparent;
+		&::after {
+			// content: "\002B";
+			content: attr(data-icon);
+			position: absolute;
+			font-size: 2.1rem;
+			right: 2rem;
+			color: black;
+		}
+		&--bg {
+			background-color: #f4f4f4;
+		}
+	}
+
+	&__desc {
+		// &:not(:first-of-type) {
+		// 	margin-top: 3rem;
+		// }
+		margin-bottom: 3rem;
+		font-size: 1.6rem;
+		font-weight: 700;
+		font-family: var(--font-secondary);
+		color: black;
+	}
+	&__desc-container {
+		// transition: all 0.5s;
+		padding-left: 2rem;
+		transform-origin: top;
+		transform: scaleY(0);
+		// opacity: 1;
+		max-height: 0;
+		transition: all 0.5s, transform 0.5s, max-height 0.5s;
+	}
+	&__desc-container--shown {
+		transform: scaleY(1);
+		margin-top: 3rem;
+		// opacity: 0;
+		max-height: 1000000px;
+		// transition: transform 1s, height 0s;
+	}
+
+	&__line {
+		display: block;
+		height: 2rem;
+		background-repeat: no-repeat;
+		left: 0;
+		top: 80%;
+		width: 100%;
+
+		margin: 3rem 0;
+	}
+}
